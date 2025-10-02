@@ -1,0 +1,28 @@
+# Define a class to hold house address details
+class HouseAddress:
+    def __init__(self, house_no, block, city, state):
+        self.house_no = house_no
+        self.block = block
+        self.city = city
+        self.state = state
+
+    def print_address(self):
+        print(f"Address of the person is: {self.house_no}, {self.block}, {self.city}, {self.state}")
+
+# List to store addresses
+addresses = []
+
+# Input for 3 persons
+for i in range(3):
+    print(f"Enter the details of person {i+1}")
+    house_no = int(input("House number: "))
+    block = int(input("Block: "))
+    city = input("City: ")
+    state = input("State: ")
+    
+    # Create a HouseAddress object and append to list
+    addresses.append(HouseAddress(house_no, block, city, state))
+
+# Print all addresses
+for address in addresses:
+    address.print_address()
